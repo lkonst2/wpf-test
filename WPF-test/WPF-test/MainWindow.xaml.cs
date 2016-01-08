@@ -24,5 +24,17 @@ namespace WPF_test
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            canvas1.Width += 50;
+            canvas1.Height += 50;
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            canvas1.Width -= 50;
+            canvas1.Height -= 50;
+        }
     }
 }

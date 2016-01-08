@@ -11,6 +11,11 @@
             <ColumnDefinition Width="102*"/>
             <ColumnDefinition Width="415*"/>
         </Grid.ColumnDefinitions>
+        <Button x:Name="button" Content="Increase" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <ScrollViewer Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <Canvas x:Name="canvas1" Height="265" Width="333" Background="#FFEAF3E7"/>
+        </ScrollViewer>
+        <Button x:Name="button1" Content="Decrease" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
 
     </Grid>
 </Window>
