@@ -23,18 +23,37 @@ namespace WPF_test
         public MainWindow()
         {
             InitializeComponent();
+            showData();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            canvas1.Width += 50;
-            canvas1.Height += 50;
+            viewbox.Width += 50;
+            viewbox.Height += 50;
+            showData();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            canvas1.Width -= 50;
-            canvas1.Height -= 50;
+            viewbox.Width -= 50;
+            viewbox.Height -= 50;
+            showData();
+        }
+
+        private void showData()
+        {
+            textBox.Text = String.Format("ActualWidth = {0}\nWidth = {1}", viewbox.ActualWidth, viewbox.Width);
+            //textBox1.Text = String.Format("ScaleX = {0}\nScaleY = {1}", 1);
+        }
+
+        private void canvas1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            textBox.Text = String.Format("Mouse X={0}", e.GetPosition(canvas1).X);
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            showData();
         }
     }
 }
