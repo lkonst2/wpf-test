@@ -53,7 +53,8 @@ namespace WPF_test
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            showData();
+            Window2 w = new Window2();
+            w.ShowDialog();
         }
     }
 }

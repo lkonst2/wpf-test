@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="594.333">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="102*"/>
-            <ColumnDefinition Width="415*"/>
+            <ColumnDefinition Width="301*"/>
+            <ColumnDefinition Width="114*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="button" Content="Increase" HorizontalAlignment="Left" Margin="17,55,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <ScrollViewer Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Button x:Name="button" Content="Increase" HorizontalAlignment="Left" Margin="17,55,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Height="20"/>
+        <ScrollViewer Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
             <Viewbox x:Name="viewbox" Height="300" Width="300">
                 <Canvas x:Name="canvas1" Height="300" Width="300" Background="#FFEAF3E7" MouseLeftButtonDown="canvas1_MouseLeftButtonDown">
                     <Button x:Name="button2" Content="Button" Canvas.Left="86" Canvas.Top="64" Width="75"/>
@@ -21,10 +22,13 @@
                 </Canvas>
             </Viewbox>
         </ScrollViewer>
-        <Button x:Name="button1" Content="Decrease" HorizontalAlignment="Left" Margin="17,30,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Button x:Name="button1" Content="Decrease" HorizontalAlignment="Left" Margin="17,30,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" Height="20"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="72" Margin="17,102,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="75"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="17,223,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="66"/>
-        <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Margin="17,5,0,0" VerticalAlignment="Top" Width="75" Click="button3_Click"/>
+        <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Margin="17,5,0,0" VerticalAlignment="Top" Width="75" Click="button3_Click" Height="20"/>
+        <StackPanel Grid.Column="2">
+            <RadioButton x:Name="radioButton" Content="RadioButton"/>
+        </StackPanel>
 
     </Grid>
 </Window>
